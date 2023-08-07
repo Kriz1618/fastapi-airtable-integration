@@ -42,6 +42,15 @@ open local [Link]('http://localhos:8000/docs')
 `ngrok http $PORT`
 
 ## Steps
+* Create a local environment `python -m venv venv`
 * Install dependencies `pip install fastapi uvicorn pymongo`
-* Generate requirements file `pip freeze > requirements.txt`
+* Generate requirements file `pipreqs`
+* Generate AirTable AccessToken [Link](https://airtable.com/create/tokens)
 
+
+<p>
+    <img src="https://freepngimg.com/thumb/python_logo/6-2-python-logo-free-png-image.png" width="100"  alt="Python" hspace="10" >
+    <img src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" width="90" alt="FastAPI" hspace="10" >
+    <img src="https://gcollazo.github.io/mongodbapp/assets/img/icon.png" width="90" alt="MongoDB" hspace="10" >
+    <img src="https://i0.wp.com/alphalionlogistics.com/wp-content/uploads/2022/08/airtable-logo.png?fit=300%2C300&ssl=1" width="90" alt="Airtable" hspace="10" >
+</p>
