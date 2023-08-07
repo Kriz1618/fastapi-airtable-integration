@@ -1,0 +1,67 @@
+@api = http://localhost:3001/api
+
+
+### Healthcheck
+GET {{api}}/status
+
+### Testing ngrok
+GET https://b0bc-201-219-245-142.ngrok.io/api/users/
+
+### Get all users
+GET {{api}}/users
+x_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQURNSU4iLCJzdWIiOiIyYjk0ZmY4OS03MWU3LTRlZTQtOWEyNC1hYzNmNWJhMTM1MGQiLCJpYXQiOjE2ODE1MDU1NzAsImV4cCI6MTY4MTUwOTE3MH0.NOrI9OqC7Xjih0mhUFEp4ReVFoKXAmxoTHj3E8542RA
+
+### Get user by id
+GET {{api}}/a71e0855-0284-4ea5-9bc9-19bb47eb9a8a
+x_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQ1JFQVRPUiIsInN1YiI6ImE3MWUwODU1LTAyODQtNGVhNS05YmM5LTE5YmI0N2ViOWE4YSIsImlhdCI6MTY4OTgwNTA4NCwiZXhwIjoxNjg5ODA4Njg0fQ.c2Mnw9GyFSjHQut0_T-YTpb7O4ZABpWXDT_P9K6nGxs
+
+### Create user
+POST {{api}}/users
+Content-Type: application/json
+
+{
+    "name": "Kriz",
+    "last_name": "Marles",
+    "email": "kriz@yopmail.com",
+    "phone": "+57 3204925731",
+    "address": "Cll 36 #25*41"
+}
+
+### Delete user
+DELETE  {{api}}/641290f460b1405cf1899570
+Content-Type: application/json
+
+
+### Update user
+PUT {{api}}/64c2d2ddc121685269349183
+Content-Type: application/json
+x_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiQkFTSUMiLCJzdWIiOiJmMzMyNTM2NS02ZTk0LTQ2M2EtODJiZi1jNzMxODc3NmJhNzMiLCJpYXQiOjE2NzkzNzE1MTcsImV4cCI6MTY3OTM3NTExN30.G_UhgX86H60pdESA5ear8K6iaTAmtahu1jITjtHNofE
+
+
+{
+    "name": "Norman",
+    "last_name": "Norman",
+    "email": "kriz@yopmail.com",
+    "phone": "+57 3204925731",
+    "address": "Cll 36 #25-41"
+}
+
+### Link to a project
+POST  {{api}}/add-to-project
+Content-Type: application/json
+
+{
+    "user": "f3325365-6e94-463a-82bf-c7318776ba73",
+    "project": "8ecb9752-75c1-4c37-a32d-9775becffa18",
+    "accessLevel": 50
+}
+
+### Delete user
+POST https://99f3-201-219-245-142.ngrok.io/api/airtable/webhook/payload
+Content-Type: application/json
+
+{
+    "user": "f3325365-6e94-463a-82bf-c7318776ba73",
+    "project": "8ecb9752-75c1-4c37-a32d-9775becffa18",
+    "accessLevel": 50
+}
