@@ -43,9 +43,19 @@ open local [Link]('http://localhos:8000/docs')
 
 ## Steps
 * Create a local environment `python -m venv venv`
-* Install dependencies `pip install fastapi uvicorn pymongo`
+* Install dependencies `pip install fastapi uvicorn pymongo pipreqs`
 * Generate requirements file `pipreqs`
 * Generate AirTable AccessToken [Link](https://airtable.com/create/tokens)
+
+
+## Configure GraphQL access
+* Go to the [BaseQL page](https://app.baseql.com/)
+* Add new data source (AirTable)
+* Type a valid User Access Token
+* In the playground click on Settings
+* Enable Protected and Mutations options
+* To update tables schemas, add the data source again
+
 
 
 <p>
