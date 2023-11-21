@@ -68,7 +68,7 @@ def get_brand_locations(brand_id: str, page: int, page_size: int = 5) -> dict:
         }
     '''
 
-    data = exec_query(base_key=config.BRANDS_KEY, query=query,
+    data = exec_query(base_key=config.USERS_KEY, query=query,
                       variables=json.dumps(variables))
     if 'data' not in data:
         return data

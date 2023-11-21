@@ -8,9 +8,13 @@ DB_HOST = os.environ['DB_HOST']
 CLUSTER = os.environ['CLUSTER']
 
 try:
-    connection = MongoClient(DB_HOST, username='DB_USER',
-                             password=DB_PASSWORD, serverSelectionTimeoutMS=5000)
-    print(' DB conected successfully '.center(50, '*'))
+    connection = MongoClient(
+        DB_HOST,
+        username='DB_USER',
+        password=DB_PASSWORD,
+        serverSelectionTimeoutMS=5000
+    )
+    print(' DB connected successfully '.center(50, '*'))
 except Exception as err:
     print('Error connecting to the DB server: {}'.format(err))
 

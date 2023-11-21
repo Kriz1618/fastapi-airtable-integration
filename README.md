@@ -36,7 +36,7 @@ source venv/bin/activate
 	
 
 ## See API documentation
-open local [Link]('http://localhos:8000/docs')
+open local [Link]('http://localhost:8000/docs')
 
 ## Serve localhost with ngrok
 `ngrok http $PORT`
